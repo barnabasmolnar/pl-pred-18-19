@@ -1,4 +1,5 @@
 import { combineReducers } from "redux";
+import { REORDER_TEAMS, SUBMIT_USER_PREDICTION, CHANGE_VIEW } from "../actions/index";
 
 const teams = [
     {teamName: "Arsenal", teamBadge: "img/arsenal.png"},
@@ -26,7 +27,7 @@ const teams = [
 // Reducers
 const teamsReducer = (state = teams, action) => {
     switch (action.type) {
-        case "REORDER_TEAMS":
+        case REORDER_TEAMS:
             return action.teams;
         default:
             return state;
@@ -39,7 +40,7 @@ const initialUserPrediction = {
 }
 const userPredictionReducer = (state = initialUserPrediction, action) => {
     switch (action.type) {
-        case "SUBMIT_USER_PREDICTION":
+        case SUBMIT_USER_PREDICTION:
             return action.predictionObject;
         default:
             return state;
@@ -48,7 +49,7 @@ const userPredictionReducer = (state = initialUserPrediction, action) => {
 
 const isTeamsViewReducer = (state = true, action) => {
     switch (action.type) {
-        case "CHANGE_VIEW":
+        case CHANGE_VIEW:
             return !state;
         default:
             return state;

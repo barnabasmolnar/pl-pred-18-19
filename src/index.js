@@ -18,11 +18,7 @@ const store = createStore(
 
 ReactDOM.render(
     <Provider store={store}>
-        {/* <App /> */}
-        {/* <Teams /> */}
-        <div>
-            <RenderStepsView />
-        </div>
+        <App />
     </Provider>,
     document.getElementById('root')
 );

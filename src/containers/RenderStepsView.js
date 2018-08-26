@@ -22,7 +22,7 @@ const RenderStepsView = props => (
             classNames="fade"
             unmountOnExit
         >
-            <UserPrediction />
+            <UserPrediction history={props.history} />
         </CSSTransition>
     </div>
 )
