@@ -37,7 +37,7 @@ const Team = props => {
                         {props.teamName}
                     </span>
 
-                    {/* <svg className="block w-8 fill-current text-green ml-auto" version="1.1" id="Select_arrows" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml="preserve">
+                    {/* <svg className="block w-8 fill-current text-green ml-auto" version="1.1" id="Select_arrows" xmlns="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20" xml="preserve">
                         <path d="M10,1L5,8h10L10,1z M10,19l5-7H5L10,19z"/>
                     </svg> */}
 

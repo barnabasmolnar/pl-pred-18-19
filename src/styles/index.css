@@ -65,6 +65,29 @@
   * @import "components/forms";
   */
 
+  /** =======================
+# LOADING
+======================= **/
+.lds-dual-ring::after {
+  content: " ";
+  display: block;
+  width: 146px;
+  height: 146px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 10px solid #eb5286;
+  border-color: #eb5286 transparent #eb5286 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /**
   * This injects all of Tailwind's utility classes, generated based on your
   * config file.

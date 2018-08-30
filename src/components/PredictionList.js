@@ -20,7 +20,7 @@ class PredictionList extends Component {
             <div>
                 <div className="container mx-auto">
                     <div className="bg-purple-lightest p-4 text-grey-darker">
-                        <svg className="inline-block align-middle w-10 h-10 fill-current text-pink-dark" version="1.1" id="List" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enable-background="new 0 0 20 20">
+                        <svg className="inline-block align-middle w-10 h-10 fill-current text-pink-dark" version="1.1" id="List" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
                             <path d="M14.4,9H8.6C8.048,9,8,9.447,8,10s0.048,1,0.6,1h5.8c0.552,0,0.6-0.447,0.6-1S14.952,9,14.4,9z M16.4,14H8.6
                             C8.048,14,8,14.447,8,15s0.048,1,0.6,1h7.8c0.552,0,0.6-0.447,0.6-1S16.952,14,16.4,14z M8.6,6h7.8C16.952,6,17,5.553,17,5
                             s-0.048-1-0.6-1H8.6C8.048,4,8,4.447,8,5S8.048,6,8.6,6z M5.4,9H3.6C3.048,9,3,9.447,3,10s0.048,1,0.6,1h1.8C5.952,11,6,10.553,6,10
