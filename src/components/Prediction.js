@@ -43,9 +43,8 @@ class Prediction extends Component {
     }
     
     renderPrediction() {
-        // console.log(this.state.mostGoalsScored);
-        const badge = this.state.predictedTable.find(team => team.teamName === this.state.mostGoalsScored).teamBadge;
-        // console.log(test);
+        const mostGoalsScoredBadge = this.state.predictedTable.find(team => team.teamName === this.state.mostGoalsScored).teamBadge;
+        const mostGoalsConcededBadge = this.state.predictedTable.find(team => team.teamName === this.state.mostGoalsConceded).teamBadge;
 
         return (
             <div>
@@ -68,7 +67,7 @@ class Prediction extends Component {
                             <div className="text-xs uppercase font-bold text-pink-dark mb-1">Most goals scored</div>
                             <div className="p-2 pl-0 inline-flex items-center">
                                 <div className="w-8 mr-2 flex-no-shrink">
-                                    <img className="block" src={badge} />
+                                    <img className="block" src={mostGoalsScoredBadge} />
                                 </div>
 
                                 <span className="uppercase font-bold tracking-wide">
@@ -80,7 +79,7 @@ class Prediction extends Component {
                             <div className="text-xs uppercase font-bold text-pink-dark mb-1">Most goals conceded</div>
                             <div className="p-2 pl-0 inline-flex items-center">
                                 <div className="w-8 mr-2 flex-no-shrink">
-                                    <img className="block" src={`/img/${this.state.mostGoalsConceded.toLowerCase().replace(/\s+/g, "-")}.png`} />
+                                    <img className="block" src={mostGoalsConcededBadge} />
                                 </div>
 
                                 <span className="uppercase font-bold tracking-wide">
@@ -162,7 +161,6 @@ class Prediction extends Component {
     render() {
         return (
             <div className="container mx-auto mb-4">
-                {/* { this.state.isError ? this.renderErrorMsg() : this.renderPrediction() } */}
 
                 { this.renderBasedOnState() }
 

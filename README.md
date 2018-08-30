@@ -16,7 +16,7 @@ Some interesting statistics will also be implemented at a later date (after quit
 * Tailwind.css
 
 ### SVGs used:
-* [Entypo pictograms by Daniel Bruce](www.entypo.com)
+* [Entypo pictograms by Daniel Bruce](http://www.entypo.com)
 
 ### Todo:
 * [ ] Design/styling is a work in progress
