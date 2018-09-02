@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 
 const PredictionListItem = props => {
     return (
@@ -23,7 +24,11 @@ const PredictionListItem = props => {
                         {props.userName}
                     </div>
                     <div className="sm:ml-auto">
-                        {new Date(props.createdAt).toLocaleDateString("en-GB")}
+                        {distanceInWordsStrict(
+                            new Date(),
+                            props.createdAt,
+                            {addSuffix: true}
+                        )}
                     </div>
                 </div>
             </div>

@@ -18,8 +18,12 @@ Some interesting statistics will also be implemented at a later date (after quit
 ### SVGs used:
 * [Entypo pictograms by Daniel Bruce](http://www.entypo.com)
 
+### Done:
+* [x] Prediction list sorting functionality
+* [x] Proper handling of loading, success and error states with respect to ajax requests
+* [x] Abstracted Loading state into its own component
+
 ### Todo:
 * [ ] Design/styling is a work in progress
-* [ ] Prediction list sorting functionality
 * [ ] Stats
-* [ ] Proper handling of loading, success and error states with respect to ajax requests (already implemented in the single Prediction component)
+* [ ] Abstarct error state into its own component and make it customisable via props

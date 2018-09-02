@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { LOADING, SUCCESS, ERROR } from "../ajaxReqStateConstants";
+import LoadingScreen from "./LoadingScreen";
 
 class Prediction extends Component {
     constructor(props) {
@@ -11,8 +12,9 @@ class Prediction extends Component {
             .then(response => {
                 response.data.predictedTable = response.data.predictedTable.map(team => ({
                     teamName: team,
-                    teamBadge: `/img/${team.toLowerCase().replace(/\s+/g, "-")}.png`
+                    teamBadge: `/img/${team.toLowerCase().replace(/\s+/g, "-")}.png`,
                 }));
+                response.data.createdAt = new Date(response.data.createdAt);
                 this.setState({ajaxReqState: SUCCESS, ...response.data})
             })
             .catch(err => {
@@ -30,18 +32,7 @@ class Prediction extends Component {
         }
     }
 
-
-    renderLoadingScreen() {
-        return (
-            <div>
-                <div className="bg-purple-lightest p-4 text-grey-darker">
-                    <div className="loading mb-4 uppercase text-pink-dark font-bold text-sm text-center">Loading...</div>
-                    <div className="lds-dual-ring flex justify-center items-center"></div>
-                </div>
-            </div>
-        )
-    }
-    
+   
     renderPrediction() {
         const mostGoalsScoredBadge = this.state.predictedTable.find(team => team.teamName === this.state.mostGoalsScored).teamBadge;
         const mostGoalsConcededBadge = this.state.predictedTable.find(team => team.teamName === this.state.mostGoalsConceded).teamBadge;
@@ -98,7 +89,7 @@ class Prediction extends Component {
                                 </div>
 
                                 <span className="uppercase font-bold tracking-wide">
-                                    { new Date(this.state.createdAt).toLocaleDateString("en-GB") }
+                                    { this.state.createdAt.toLocaleDateString("en-GB") }
                                 </span>
                             </div>
                         </div>
@@ -150,7 +141,7 @@ class Prediction extends Component {
     renderBasedOnState() {
         switch (this.state.ajaxReqState) {
             case LOADING:
-                return this.renderLoadingScreen();
+                return <LoadingScreen />
             case SUCCESS:
                 return this.renderPrediction();
             case ERROR:
