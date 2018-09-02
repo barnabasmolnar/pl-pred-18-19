@@ -49,6 +49,10 @@
   @apply bg-white border-pink-dark text-pink-dark;
 }
 
+.btn-inactive {
+  @apply text-grey-dark border-grey-dark;
+}
+
 /**
   * Here you would add any of your custom component classes; stuff that you'd
   * want loaded *before* the utilities so that the utilities could still
@@ -65,7 +69,7 @@
   * @import "components/forms";
   */
 
-  /** =======================
+/** =======================
 # LOADING
 ======================= **/
 .lds-dual-ring::after {
@@ -86,6 +90,13 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+/** =======================
+# ICON DESC ORDER
+======================= **/
+.icon--desc {
+  transform: scaleX(-1);
 }
 
 /**
