@@ -46,7 +46,14 @@ class UserPrediction extends Component {
 
         axios.post('http://localhost:3001/api/prediction', predictionObj)
             .then(() => this.props.history.push("/predictions"))
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log(err.response);
+                if (err.response.data.code === 11000) {
+                    alert("A prediction has already been made with this username. Please choose a different name.");
+                } else {
+                    alert("An unknown error occured. Please try again later.");
+                }
+            });
     }
 
     handleViewChange() {

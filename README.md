@@ -21,9 +21,9 @@ Some interesting statistics will also be implemented at a later date (after quit
 ### Done:
 * [x] Prediction list sorting functionality
 * [x] Proper handling of loading, success and error states with respect to ajax requests
-* [x] Abstracted Loading state into its own component
+* [x] Abstract Loading state into its own component
+* [x] Abstarct error state into its own component and make it customisable via props
 
 ### Todo:
 * [ ] Design/styling is a work in progress
 * [ ] Stats
-* [ ] Abstarct error state into its own component and make it customisable via props
