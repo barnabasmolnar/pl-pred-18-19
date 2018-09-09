@@ -50,7 +50,7 @@ export default class NavBar extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className={ classnames({"hidden": !this.state.isResNavOpen}, "lg:block") }>
+                        <div className={ classnames({"hidden": !this.state.isResNavOpen}, "menu lg:block") }>
                             <ul className="list-reset h-full block lg:flex">
                                 <li>
                                     <NavLink

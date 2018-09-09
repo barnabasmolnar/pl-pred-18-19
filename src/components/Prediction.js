@@ -9,7 +9,7 @@ class Prediction extends Component {
     constructor(props) {
         super(props)
 
-        axios.get(`http://localhost:3001/api/prediction/${props.match.params._id}`)
+        axios.get(`/api/prediction/${props.match.params._id}`)
             .then(response => {
                 response.data.predictedTable = response.data.predictedTable.map(team => ({
                     teamName: team,
@@ -59,7 +59,11 @@ class Prediction extends Component {
                             <div className="text-xs uppercase font-bold text-pink-dark mb-1">Most goals scored</div>
                             <div className="p-2 pl-0 inline-flex items-center">
                                 <div className="w-8 mr-2 flex-no-shrink">
-                                    <img className="block" src={mostGoalsScoredBadge} />
+                                    <img 
+                                        className="block"
+                                        src={mostGoalsScoredBadge}
+                                        alt={ `${this.state.mostGoalsScored} badge` }
+                                    />
                                 </div>
 
                                 <span className="uppercase font-bold tracking-wide">
@@ -71,7 +75,11 @@ class Prediction extends Component {
                             <div className="text-xs uppercase font-bold text-pink-dark mb-1">Most goals conceded</div>
                             <div className="p-2 pl-0 inline-flex items-center">
                                 <div className="w-8 mr-2 flex-no-shrink">
-                                    <img className="block" src={mostGoalsConcededBadge} />
+                                    <img
+                                        className="block"
+                                        src={mostGoalsConcededBadge}
+                                        alt={ `${this.state.mostGoalsConceded} badge` }
+                                    />
                                 </div>
 
                                 <span className="uppercase font-bold tracking-wide">
@@ -106,7 +114,11 @@ class Prediction extends Component {
                         
                             <div className="team">
                                 <div className="w-10 mr-4 flex-no-shrink">
-                                    <img className="block" src={ team.teamBadge } />
+                                    <img 
+                                        className="block"
+                                        src={ team.teamBadge }
+                                        alt={ `${team.teamName} badge` }
+                                    />
                                 </div>
 
                                 <span className="uppercase text-sm tracking-wide">
@@ -122,28 +134,30 @@ class Prediction extends Component {
 
     renderBasedOnState() {
         switch (this.state.ajaxReqState) {
-            case LOADING:
-                return <LoadingScreen />
             case SUCCESS:
                 return this.renderPrediction();
             case ERROR:
                 return <ErrorScreen msg={"The prediction could not be loaded or does not exist."}/>
+            default:
+                return <LoadingScreen />
         }
     }
 
     render() {
         return (
-            <div className="container mx-auto mb-4">
+            <div className="relative">
+                <div className="container mx-auto mb-4 absolute pin-x w-full">
 
-                { this.renderBasedOnState() }
+                    { this.renderBasedOnState() }
 
-                <div className="bg-purple-lightest p-4 my-4 text-grey-darker">
-                    <Link
-                        className="btn btn-secondary inline-block no-underline"
-                        to="/"
-                    >
-                        Go back
-                    </Link>
+                    <div className="bg-purple-lightest p-4 my-4 text-grey-darker">
+                        <Link
+                            className="btn btn-secondary inline-block no-underline"
+                            to="/predictions"
+                        >
+                            Go back
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

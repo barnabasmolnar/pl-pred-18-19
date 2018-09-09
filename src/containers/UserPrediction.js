@@ -44,7 +44,7 @@ class UserPrediction extends Component {
             mostGoalsConceded: this.state.mostGoalsConceded
         }
 
-        axios.post('http://localhost:3001/api/prediction', predictionObj)
+        axios.post('/api/prediction', predictionObj)
             .then(() => this.props.history.push("/predictions"))
             .catch(err => {
                 console.log(err.response);
@@ -196,7 +196,11 @@ class UserPrediction extends Component {
 
                                             <div className="team">
                                                 <div className="w-10 mr-4 flex-no-shrink">
-                                                    <img className="block" src={team.teamBadge} />
+                                                    <img
+                                                        className="block"
+                                                        src={team.teamBadge}
+                                                        alt={`${team.teamName} badge`}
+                                                    />
                                                 </div>
     
                                                 <span className="uppercase block text-sm tracking-wide">

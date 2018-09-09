@@ -27,7 +27,7 @@ class DraggableTeams extends Component {
     }
 
     onDragEnd(result) {
-        const {destination, source, draggableId} = result;
+        const { destination, source } = result;
         if (!destination) { return; }
         if (destination.draggableId === source.droppableId && destination.index === source.index) {
             return;
@@ -56,7 +56,7 @@ class DraggableTeams extends Component {
     
     render() {
         return (
-            <div className="draggable-teams absolute pin">
+            <div className="draggable-teams absolute pin-x w-full">
                 <div className="container mx-auto">
                     <div className="bg-purple-lightest p-4 text-grey-darker">
                         <svg className="inline-block align-middle w-10 h-10 fill-current text-pink" version="1.1" id="Hand" x="0px" y="0px"

@@ -2,13 +2,12 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 
-const PredictionListItem = props => {
-    return (
-        <li>
-            <Link
-                className="no-underline text-black"
-                to={`/prediction/${props._id}`}
-            >
+const PredictionListItem = props => (
+    <li>
+        <Link
+            className="no-underline text-black"
+            to={`/prediction/${props._id}`}
+        >
             <div className="mb-4 flex">
                 <div className="bg-pink-dark flex items-center justify-center leading-none p-2">
                     <svg className="w-12 h-12" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -32,9 +31,8 @@ const PredictionListItem = props => {
                     </div>
                 </div>
             </div>
-            </Link>
-        </li>
-    )
-}
+        </Link>
+    </li>
+)
 
 export default PredictionListItem;

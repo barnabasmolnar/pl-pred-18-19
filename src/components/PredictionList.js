@@ -10,7 +10,7 @@ class PredictionList extends Component {
     constructor(props) {
         super(props);
 
-        axios.get('http://localhost:3001/api/prediction')
+        axios.get('/api/prediction')
             .then(response => {
                 const preds = response.data.map(predObj => Object.assign({}, predObj, {createdAt: new Date(predObj.createdAt)}));
                 this.setState({ajaxReqState: SUCCESS, predictions: preds});
@@ -143,19 +143,21 @@ class PredictionList extends Component {
 
     renderBasedOnState() {
         switch (this.state.ajaxReqState) {
-            case LOADING:
-                return <LoadingScreen />
             case SUCCESS:
                 return this.renderPredictionList();
             case ERROR:
                 return <ErrorScreen msg={"No predictions were found."}/>
+            default:
+                return <LoadingScreen />
         }
     }
 
     render() {
         return (
-            <div className="container mx-auto mb-4">
-                { this.renderBasedOnState() }
+            <div className="relative">
+                <div className="container mx-auto mb-4 absolute pin-x w-full">
+                    { this.renderBasedOnState() }
+                </div>
             </div>
         )
     }

@@ -27,11 +27,6 @@ const RenderStepsView = props => (
     </div>
 )
 
-
-// const RenderStepsView = props => (
-//     <UserPrediction />
-// )
-
 const mapStateToProps = state => ({ isTeams: state.isTeamsViewReducer });
 
 export default connect(mapStateToProps)(RenderStepsView);
