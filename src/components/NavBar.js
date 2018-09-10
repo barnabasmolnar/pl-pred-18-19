@@ -86,7 +86,11 @@ export default class NavBar extends Component {
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <a href="#" className="[ text-white no-underline w-full flex items-center px-4 py-4 h-full ] [ lg:py-0 ]">
+                                    <NavLink
+                                        to="/stats"
+                                        className="[ text-white no-underline w-full flex items-center px-4 py-4 h-full ] [ lg:py-0 ]"
+                                        activeClassName="active bg-pink-dark"
+                                    >
                                         <svg className="block w-4 h-4 mr-2 fill-current" version="1.1" id="Line_graph" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                         viewBox="0 0 20 20"  enableBackground="new 0 0 20 20">
                                             <path d="M0.69,11.331l1.363,0.338l1.026-1.611l-1.95-0.482c-0.488-0.121-0.981,0.174-1.102,0.66
@@ -98,10 +102,14 @@ export default class NavBar extends Component {
                                                 c-0.27,0.422-0.144,0.983,0.28,1.25c0.15,0.096,0.319,0.141,0.486,0.141c0.301,0,0.596-0.149,0.768-0.42L8.684,7.18z"/>
                                         </svg>
                                         <div>Statistics</div>
-                                    </a>
+                                    </NavLink>
                                 </li>
                                 <li>
-                                    <a href="#" className="[ text-white no-underline w-full flex items-center px-4 py-4 h-full ] [ lg:py-0 ]">
+                                    <NavLink
+                                        to="/about"
+                                        className="[ text-white no-underline w-full flex items-center px-4 py-4 h-full ] [ lg:py-0 ]"
+                                        activeClassName="active bg-pink-dark"
+                                    >
                                         <svg className="block w-4 h-4 mr-2 fill-current" version="1.1" id="Info" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                         viewBox="0 0 20 20"  enableBackground="new 0 0 20 20">
                                             <path d="M12.432,0c1.34,0,2.01,0.912,2.01,1.957c0,1.305-1.164,2.512-2.679,2.512c-1.269,0-2.009-0.75-1.974-1.99
@@ -110,7 +118,7 @@ export default class NavBar extends Component {
                                                 c-0.246,0.945-0.141,1.271,0.106,1.271c0.317,0,1.357-0.392,2.379-1.207l0.6,0.814C12.098,19.02,9.365,20,8.309,20z"/>
                                         </svg>                   
                                         <div>About</div>
-                                    </a>
+                                    </NavLink>
                                 </li>
                             </ul>
                         </div>
