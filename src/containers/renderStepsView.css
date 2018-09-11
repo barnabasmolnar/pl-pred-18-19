@@ -1,3 +1,4 @@
+/* purgecss start ignore */
 .fade-enter {
     opacity: 0;
     z-index: 1
@@ -13,3 +14,4 @@
     opacity: 0;
     transition: opacity .5s ease-in;
 }
+/* purgecss end ignore */

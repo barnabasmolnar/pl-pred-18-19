@@ -46,23 +46,17 @@ class DraggableTeams extends Component {
             return;
         }
 
-        console.log(result);
-
         const teams = reorder(
             this.state.teams,
             result.source.index,
             result.destination.index
         );
 
-        // console.log(items);
-
         this.setState({ teams });
     }
 
     handleSubmit(e) {
         e.preventDefault();
-        console.log("submitted");
-        console.log(this.state);
         this.props.reorderTeams(this.state.teams);
         this.props.changeView();
     }

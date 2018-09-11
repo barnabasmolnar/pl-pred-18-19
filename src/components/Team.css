@@ -1,5 +1,4 @@
-/* .team__badge {
-    display: block;
-    width: 40px;
-    height: 40px;
-} */
+[data-react-beautiful-dnd-drag-handle="0"] {
+    cursor: move;
+    cursor: grab;
+}

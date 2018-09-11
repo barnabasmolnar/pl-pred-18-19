@@ -22,7 +22,7 @@ export default class NavBar extends Component {
             <header className="bg-purple-darkest mb-4">
                 <div className="container mx-auto">
                     <nav className="navbar lg:flex justify-between text-white">
-                        <div className="flex items-center">
+                        <div className="flex flex-1 items-center">
                             <Link to="/">
                                 <div className="logo bg-green inline-flex p-1 items-center justify-center">
                                     <svg className="w-12 h-12 fill-current text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4.343 6.35" height="23.999" width="16.415">
@@ -41,7 +41,7 @@ export default class NavBar extends Component {
                                     </div>
                                 </Link>
                                 <div className="lg:hidden" onClick={this.handleResNavToggle}>
-                                    <svg className="block w-8 mr-2 fill-current" version="1.1" id="Menu" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                    <svg className="block w-8 h-8 mr-2 fill-current" version="1.1" id="Menu" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                                     viewBox="0 0 20 20"  enableBackground="new 0 0 20 20">
                                         <path d="M16.4,9H3.6C3.048,9,3,9.447,3,10c0,0.553,0.048,1,0.6,1h12.8c0.552,0,0.6-0.447,0.6-1S16.952,9,16.4,9z
                                         M16.4,13H3.6C3.048,13,3,13.447,3,14c0,0.553,0.048,1,0.6,1h12.8c0.552,0,0.6-0.447,0.6-1S16.952,13,16.4,13z M3.6,7h12.8

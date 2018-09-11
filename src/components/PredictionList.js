@@ -103,7 +103,7 @@ class PredictionList extends Component {
                         >
                             <span className="inline-block align-bottom">Sort by username</span>
                             <svg
-                                className={ classnames("w-4 ml-2 fill-current text-pink-dark inline-block align-bottom", {"invisible": this.state.sortState.prop !== "userName", "icon--desc": this.state.sortState.isDesc}) }
+                                className={ classnames("w-4 h-4 ml-2 fill-current text-pink-dark inline-block align-bottom", {"invisible": this.state.sortState.prop !== "userName", "icon--desc": this.state.sortState.isDesc}) }
                                 version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20"
                             >
                                 <path d="M17,1h-2c-0.552,0-1,0.447-1,1v16.992h4V2C18,1.447,17.553,1,17,1z M11,7H9C8.448,7,8,7.447,8,8v10.992h4V8
@@ -117,7 +117,7 @@ class PredictionList extends Component {
                         >
                             <span className="inline-block align-bottom">Sort by date</span>
                             <svg
-                                className={ classnames("w-4 ml-2 fill-current text-pink-dark align-bottom", {"invisible": this.state.sortState.prop !== "dateSent", "icon--desc": this.state.sortState.isDesc}) }
+                                className={ classnames("w-4 h-4 ml-2 fill-current text-pink-dark align-bottom", {"invisible": this.state.sortState.prop !== "dateSent", "icon--desc": this.state.sortState.isDesc}) }
                                 version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20"
                             >
                                 <path d="M17,1h-2c-0.552,0-1,0.447-1,1v16.992h4V2C18,1.447,17.553,1,17,1z M11,7H9C8.448,7,8,7.447,8,8v10.992h4V8

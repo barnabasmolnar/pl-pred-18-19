@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 
 const PredictionListItem = props => (
-    <li>
+    <li className="mb-4">
         <Link
             className="no-underline text-black"
             to={`/prediction/${props._id}`}
         >
-            <div className="mb-4 flex">
+            <div className="flex">
                 <div className="bg-pink-dark flex items-center justify-center leading-none p-2">
                     <svg className="w-12 h-12" version="1.1" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
                         <g fill="none" fillRule="evenodd" id="Page-1" stroke="none" strokeWidth="1">

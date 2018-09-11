@@ -23,6 +23,8 @@ Some interesting statistics will also be implemented at a later date (after quit
 * [x] Proper handling of loading, success and error states with respect to ajax requests
 * [x] Abstract Loading state into its own component
 * [x] Abstarct error state into its own component and make it customisable via props
+* [x] Polyfilled Array.find and Array.from for IE
+* [x] Added purgeCSS as a dev dependency
 
 ### Todo:
 * [ ] Design/styling is a work in progress

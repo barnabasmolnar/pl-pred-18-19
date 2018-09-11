@@ -82,7 +82,7 @@ class Prediction extends Component {
                         <div className="flex-1">
                             <div className="text-xs uppercase font-bold text-pink-dark mb-1">Prediction date</div>
                             <div className="p-2 pl-0 inline-flex items-center">
-                                <div className="w-8 mr-2 flex-no-shrink">
+                                <div className="w-8 h-8 mr-2 flex-no-shrink">
                                     <svg className="fill-current text-grey-darker" version="1.1" id="Calendar" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 20 20" enableBackground="new 0 0 20 20">
                                         <path className="" d="M17,3h-1v2h-3V3H7v2H4V3H3C1.899,3,1,3.9,1,5v12c0,1.1,0.899,2,2,2h14c1.1,0,2-0.9,2-2V5C19,3.9,18.1,3,17,3
                                             z M17,17H3V9h14V17z M6.5,1h-2v3.5h2V1z M15.5,1h-2v3.5h2V1z" />
