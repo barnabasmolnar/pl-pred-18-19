@@ -27,5 +27,6 @@ Some interesting statistics will also be implemented at a later date (after quit
 * [x] Added purgeCSS as a dev dependency
 
 ### Todo:
-* [ ] Design/styling is a work in progress
 * [ ] Stats
+* [ ] Need to add some proper info/text for the About component
+* [ ] Might want to look into animating the mobile menu (eg. a slideToggle animation or something similar)
